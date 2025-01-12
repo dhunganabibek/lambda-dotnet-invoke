@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <!-- This is required to generate the runtime configuration files for the Lambda function. -->
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    
+    <AWSLambdaToolsDefaults>
+      <FunctionName>LambdaDotnetInvoke</FunctionName>
+      <Runtime>dotnet8</Runtime>
+      <!-- assembly::namespace.class::method -->
+      <Handler>LambdaDotnetInvoke::LambdaDotnetInvoke.Function::Main</Handler>  
+    </AWSLambdaToolsDefaults> 
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.Core" Version="2.1.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>
