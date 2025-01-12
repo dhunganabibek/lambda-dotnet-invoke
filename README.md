@@ -15,12 +15,12 @@ dotnet build
 
 To deploy the Lambda function, use the AWS CLI with the following command:
 
-```
+```bash
 aws lambda create-function \
-    --function-name HelloWorldLambda \
+    --function-name <lambda_name> \
     --runtime dotnet6 \
-    --handler HelloWorldLambda::HelloWorldLambda.Function::FunctionHandler \
-    --zip-file fileb://HelloWorldLambda.zip \
-    --role arn:aws:iam::891377073311:role/lambda-admin-role
+    --handler <assembly::namespace.class::function> \
+    --zip-file fileb://<zip_file> \
+    --role <role_arn>
 ```
 
