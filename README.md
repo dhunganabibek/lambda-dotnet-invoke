@@ -10,7 +10,6 @@ To build the project, navigate to the `src` directory and run:
 dotnet build
 ```
 
-
 ## Deploying the Lambda Function
 
 To deploy the Lambda function, use the AWS CLI with the following command:
@@ -24,3 +23,8 @@ aws lambda create-function \
     --role <role_arn>
 ```
 
+## Invoking Lambda function from aws cli
+
+```bash
+aws lambda invoke --function-name <function_name> <output_file>
+```
